@@ -1,0 +1,8 @@
+Ga -> Gb0(GI * 2 + 1, GI, GI)                     {true}
+    | Gb1(GI * 2 + 1, GI, GI)                     {true}
+Gb0[n, i1, i2] -> Cons(i1, Gb0[n-1, i1, i2])      {n % 2 == 1}
+                | Cons(i2, Gb0[n-1, i1, i2])      {n % 2 == 0 && n > 0}
+                |  Nil()                          {n == 0}
+Gb1[n, i1, i2] -> Cons(i2, Gb1[n-1, i1, i2])      {n % 2 == 1}
+                | Cons(i1, Gb1[n-1, i1, i2])      {n % 2 == 0 && n > 0}
+                |  Nil()                          {n == 0}

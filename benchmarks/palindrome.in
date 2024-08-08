@@ -1,0 +1,22 @@
+query {
+    palindrome(l);
+}
+
+template {
+    List Ga -> G1(E0, E0, E0)                     {C0}
+    List Gb[n, i1, i2] -> Cons(E1, G1[E1, E1, E1])  {C1}
+                     |  Nil()                     {C1}
+}
+
+components {
+    int E0 -> GI | GI * 2 + {0 | 1};  // GI is a default generator that generates arbitrary natural numbers.
+    boolean C0 -> true;
+    int E1 -> n | n - 1 | i1 | i2;
+    boolean C1 -> true | AP | AP && AP;
+    boolean AP -> n % 2 == {0 | 1} 
+                | n > 0 | n >= 0 | n == 0;
+}
+
+
+
+

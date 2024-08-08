@@ -1,0 +1,3 @@
+G[lo, hi] -> Node(lo, G[lo, lo], G[lo + 1, hi])       {lo < hi}
+          |  Node(hi - 1, G[lo, hi - 1], G[hi, hi])   {lo < hi}
+          |  Leaf()                                   {true}

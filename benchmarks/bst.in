@@ -1,0 +1,17 @@
+query {
+    isBST(t, lo, hi);
+}
+
+template {
+    Tree G[lo, hi] -> Node(E, G[E, E], G[E, E])   {C}
+                   |  Leaf()                      {C}
+}
+
+components {
+    int E -> V + {-1 | 0 | 1};
+    int V -> lo | hi;
+    boolean C -> true | lo < hi | lo <= hi | lo > hi | lo >= hi | lo = hi | lo != hi;
+}
+
+
+
