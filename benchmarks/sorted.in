@@ -1,0 +1,17 @@
+query {
+    sorted(l);
+}
+
+template {
+    List Ga[n]   -> G[n, GI]      {true}
+    List G[n, i] -> Cons(E, G[E]) {C}
+                 |  Nil()         {C}
+}
+
+components {
+    int E -> i + {-1 | 0 | 1};
+    boolean C -> n > 0 | n == 0;
+}
+
+
+

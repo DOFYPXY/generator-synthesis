@@ -3,9 +3,9 @@ query {
 }
 
 template {
-    List Ga -> G1(E0, E0, E0)                     {C0}
-    List Gb[n, i1, i2] -> Cons(E1, G1[E1, E1, E1])  {C1}
-                     |  Nil()                     {C1}
+    List Ga -> Gb(E0, E0, E0)                       {C0}
+    List Gb[n, i1, i2] -> Cons(E1, Gb[E1, E1, E1])  {C1}
+                     |  Nil()                       {C1}
 }
 
 components {

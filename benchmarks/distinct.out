@@ -1,0 +1,6 @@
+Ga[n] -> G0(n, GI)                {true}
+      |  G1(n, GI)                {true}
+G0[n, i] -> Cons(i+1, G0[n-1, i+1])  {n>0}
+         |  Nil()                    {n==0}
+G1[n, i] -> Cons(i-1, G1[n-1, i-1])  {n>0}
+         |  Nil()                    {n==0}

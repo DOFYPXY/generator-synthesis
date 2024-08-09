@@ -1,0 +1,17 @@
+query {
+    eq(size(l), size(list2set(l)));
+}
+
+template {
+    List Ga[n] -> G(n, GI)                {true}
+    List G[n, i] -> Cons(E1, G[E1, E1])  {C1}
+                     |  Nil()              {C1}
+}
+
+components {
+    int E1 -> n | n - 1 | i | i - 1 | i + 1;
+    boolean C1 -> n > 0 | n == 0;
+}
+
+
+

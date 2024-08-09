@@ -1,0 +1,4 @@
+List G[n, i] -> Cons(i, G[n-1, i+1])   {n>0}
+             |  Cons(i, G[n-1, n])     {n>0}
+             |  Cons(i+1, G[n-1, i+1]) {n>0}
+             |  Nil()             {n==0}

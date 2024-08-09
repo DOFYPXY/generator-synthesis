@@ -1,0 +1,13 @@
+query {
+    balanced(t);
+}
+
+template {
+    Tree G[n] -> Node(GI, G[E], G[E]) {C}
+               | Leaf()              {C}
+}
+
+components {
+    int E -> n | n-1 | n-2;
+    boolean C -> n {>|>=|==} {0 | 1};
+}

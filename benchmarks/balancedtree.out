@@ -1,0 +1,4 @@
+G[n] -> Node(GI, G[n-1], G[n-2]) {n>1}
+      | Node(GI, G[n-2], G[n-1]) {n>1}
+      | Node(GI, G[n-1], G[n-1]) {n>0}
+      | Leaf()              {n==0}
