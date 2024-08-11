@@ -1,0 +1,15 @@
+query {
+    isTree(t);
+}
+
+template {
+    List Ga[n] -> G[n, 1];
+    List G[n, i] -> Cons(Edge(E, E), G[E, E]) {C}
+                 |  Nil()                     {C}
+}
+
+components {
+    int E -> I | GI[I, I];
+    boolean C -> I < I | I <= I | I == I;
+    int I -> 0 | 1 | n | n - 1 | i | i - 1;
+}
